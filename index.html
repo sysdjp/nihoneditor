@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本エディタ サポート</title>
+<meta name="description" content="iPhone・iPad 用テキストエディタ「日本エディタ」のサポートページです。機能一覧、使い方、よくある質問、お問い合わせ先を掲載しています。">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="icon.png" alt="">
+    <span class="name">日本エディタ</span>
+    <nav>
+      <a href="index.html" aria-current="page">サポート</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="app">
+      <img src="icon.png" alt="日本エディタのアイコン">
+      <div>
+        <h1>日本エディタ</h1>
+        <p class="lead">iPhone・iPad で使える、日本語に強いテキストエディタ</p>
+      </div>
+    </div>
+    <p class="req">対応環境：iOS 17 / iPadOS 17 以降（iPhone・iPad）</p>
+  </div>
+
+  <ul class="toc">
+    <li><a href="#features">機能一覧</a></li>
+    <li><a href="#start">基本的な使い方</a></li>
+    <li><a href="#sync">iCloud 同期</a></li>
+    <li><a href="#macro">マクロ</a></li>
+    <li><a href="#keys">キーボードショートカット</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+
+<main>
+
+<!-- ===================== 機能一覧 ===================== -->
+<section id="features">
+  <h2>機能一覧</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>編集モードと色分け</h3>
+      <ul>
+        <li>19種類の編集モード（下表）</li>
+        <li>拡張子から編集モードを自動判定</li>
+        <li>コメント・文字列・数値・キーワード・URL の色分け</li>
+        <li>全角スペース・TAB・制御文字の表示</li>
+        <li>項目ごとに文字色・背景色・太字・下線を設定</li>
+        <li>キーワードセット（1モードにつき最大10セット）</li>
+        <li>正規表現キーワード</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>アウトライン解析</h3>
+      <ul>
+        <li>関数・クラス・見出しを一覧表示</li>
+        <li>タップでその場所へ移動、名前で絞り込み</li>
+        <li>C++ はクラスごとのツリー表示</li>
+        <li>テキストは「■」「1.」「第1章」などで階層化</li>
+        <li>独自の解析ルールを追加可能</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>検索・置換</h3>
+      <ul>
+        <li>インクリメンタルサーチ（一致箇所をハイライト）</li>
+        <li>正規表現・単語単位・大文字小文字の区別</li>
+        <li>すべて置換（ファイル全体／選択範囲）</li>
+        <li>検索履歴</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Grep（複数ファイルの検索）</h3>
+      <ul>
+        <li>フォルダ・ファイルの種類（例 <code>*.txt;*.c</code>）を指定</li>
+        <li>サブフォルダも検索</li>
+        <li>結果をタップして該当行を開く</li>
+        <li>結果をテキストとして保存</li>
+        <li>Grep 置換</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>移動・ジャンプ</h3>
+      <ul>
+        <li>指定行へジャンプ</li>
+        <li>タグジャンプ（<code>ファイル名(行,桁)</code> などから該当箇所へ）</li>
+        <li>ダイレクトタグジャンプ（単語の定義へ）</li>
+        <li>ブックマーク（設定・一覧・前後へ移動）</li>
+        <li>前回のカーソル位置を復元</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>文字コード・改行コード</h3>
+      <ul>
+        <li>Shift_JIS（CP932）・JIS・EUC-JP</li>
+        <li>UTF-8（BOM あり／なし）・UTF-16LE・UTF-16BE</li>
+        <li>自動判定と、文字コードを指定しての開き直し</li>
+        <li>保存する文字コードの変更</li>
+        <li>改行コード CRLF・LF・CR の変更</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>編集・変換</h3>
+      <ul>
+        <li>行の複製・削除、行コメントの切り替え</li>
+        <li>インデント／逆インデント、自動インデント</li>
+        <li>全角⇔半角（英数・カナ）、ひらがな⇔カタカナ</li>
+        <li>大文字⇔小文字、TAB⇔空白</li>
+        <li>行の並べ替え・重複行の削除・行末の空白の削除</li>
+        <li>日付・時刻・制御コードの挿入</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>入力支援</h3>
+      <ul>
+        <li>入力補完（文書内の単語・キーワード・単語ファイル）</li>
+        <li>キーワードヘルプ（自分で登録する辞書）</li>
+        <li>キーボード上のツールバー（ボタンを自由に並べ替え）</li>
+        <li>外付けキーボードのショートカット（変更可能）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>マクロ</h3>
+      <ul>
+        <li>キーボードマクロ（記録・再生）</li>
+        <li>JavaScript で書けるマクロ</li>
+        <li>記録したキーボードマクロを JavaScript として保存</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>ファイル管理</h3>
+      <ul>
+        <li>フォルダ分け、名前の変更、削除</li>
+        <li>複数ファイルをタブで切り替え</li>
+        <li>「ファイル」アプリからの読み込み、共有・書き出し</li>
+        <li>自動保存、世代付きの自動バックアップと復元</li>
+        <li>差分表示（保存済みの内容・他のファイル・バックアップと比較）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>表示・印刷</h3>
+      <ul>
+        <li>行番号、カーソル行の強調</li>
+        <li>折り返し（しない／画面幅／指定した桁数）</li>
+        <li>英文ワードラップ、禁則処理</li>
+        <li>フォント・文字サイズ・行間・文字間隔・TAB 幅</li>
+        <li>印刷（ヘッダー・フッター・行番号、設定を8件まで登録）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>iCloud 同期</h3>
+      <ul>
+        <li>ファイルを iCloud Drive に保存して自動同期</li>
+        <li>設定・マクロ・キーワードセットも同期</li>
+        <li>ブックマーク・カーソル位置も同期</li>
+        <li>別の端末と同時に編集したときは、どちらを残すか選択</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>対応している編集モード</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>編集モード</th><th>主な拡張子</th></tr></thead>
+    <tbody>
+      <tr><td>テキスト</td><td>txt, log</td></tr>
+      <tr><td>C/C++</td><td>c, cpp, cc, h, hpp, m, mm</td></tr>
+      <tr><td>HTML</td><td>html, htm, xml, css, php, svg</td></tr>
+      <tr><td>PL/SQL</td><td>sql, pls, pkb, pks</td></tr>
+      <tr><td>COBOL</td><td>cbl, cob, cpy, pco</td></tr>
+      <tr><td>Java</td><td>java, kt, cs, scala</td></tr>
+      <tr><td>アセンブラ</td><td>asm, s, inc</td></tr>
+      <tr><td>AWK</td><td>awk</td></tr>
+      <tr><td>MS-DOSバッチファイル</td><td>bat, cmd</td></tr>
+      <tr><td>Pascal</td><td>pas, dpr, pp</td></tr>
+      <tr><td>TeX</td><td>tex, sty, bib</td></tr>
+      <tr><td>Perl</td><td>pl, pm, cgi</td></tr>
+      <tr><td>Visual Basic</td><td>bas, frm, cls, vb, vbs</td></tr>
+      <tr><td>リッチテキスト</td><td>rtf</td></tr>
+      <tr><td>設定ファイル</td><td>ini, conf, cfg, toml, yaml, yml, env</td></tr>
+      <tr><td>Markdown</td><td>md, markdown</td></tr>
+      <tr><td>JavaScript</td><td>js, ts, jsx, tsx, json</td></tr>
+      <tr><td>Python</td><td>py</td></tr>
+      <tr><td>Swift</td><td>swift</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>拡張子が一覧にないファイルも「テキスト」として開けます。開いたあと、画面下のステータスバーで編集モードを切り替えられます。</p>
+</section>
+
+<!-- ===================== 基本的な使い方 ===================== -->
+<section id="start">
+  <h2>基本的な使い方</h2>
+
+  <h3>ファイルを作る・開く</h3>
+  <ul>
+    <li>ファイル一覧の右上の <strong>＋</strong> から、新規ファイル・新規フォルダの作成や、「ファイル」アプリからの読み込みができます。</li>
+    <li>ファイルを長押しすると、名前の変更・共有・削除ができます。</li>
+    <li>開いたファイルは画面上部にタブとして並び、タップで切り替えられます。</li>
+  </ul>
+
+  <h3>編集画面</h3>
+  <ul>
+    <li>右上の <strong>🔍</strong> で検索・置換、<strong>≡</strong> でアウトライン、<strong>…</strong> でそのほかのすべての機能を使えます。</li>
+    <li>キーボードの上のツールバーには、TAB 入力・カーソル移動・元に戻すなどのボタンが並びます。入力中は、補完の候補もここに表示されます。</li>
+    <li>画面下のステータスバーに、カーソルの行・桁、編集モード、文字コード、改行コードが表示されます。タップすると切り替えられます。</li>
+  </ul>
+
+  <h3>設定</h3>
+  <ul>
+    <li><strong>共通設定</strong>（ファイル一覧の右上の … → 設定）：フォント、新規ファイルの文字コード、自動保存、バックアップ、キー割り当て、ツールバー、印刷設定など。</li>
+    <li><strong>タイプ別設定</strong>（編集画面の … → タイプ別設定）：TAB 幅、折り返し、禁則処理、色、キーワード、アウトライン解析ルール、入力補完の単語、キーワードヘルプ辞書など。編集モードごとに設定できます。</li>
+  </ul>
+</section>
+
+<!-- ===================== iCloud 同期 ===================== -->
+<section id="sync">
+  <h2>iCloud 同期</h2>
+  <p>日本エディタで作ったファイルは iCloud Drive の「日本エディタ」フォルダに保存され、同じ Apple ID でサインインしている iPhone・iPad の間で自動的に同期されます。「ファイル」アプリの iCloud Drive からも開けます。</p>
+  <p>次の情報も同期されます。</p>
+  <ul>
+    <li>共通設定・タイプ別設定</li>
+    <li>マクロ、キーワードセット、印刷設定</li>
+    <li>各ファイルのブックマーク、カーソル位置、編集モード</li>
+  </ul>
+  <div class="note">
+    同期するには、「設定」アプリ → 自分の名前 → iCloud で <strong>iCloud Drive</strong> をオンにしてください。iCloud を使えないときは、ファイルは端末内に保存されます。あとで iCloud を有効にしたら、日本エディタの設定画面から端末内のファイルを iCloud へ移動できます。
+  </div>
+  <p>自動バックアップは端末内だけに保存され、同期されません。</p>
+</section>
+
+<!-- ===================== マクロ ===================== -->
+<section id="macro">
+  <h2>マクロ</h2>
+  <h3>キーボードマクロ</h3>
+  <p>編集画面の … → マクロ →「キーマクロの記録開始」から記録を始めます。文字の入力と、ツールバーやメニューから実行した編集コマンドが記録されます。記録した内容は「キーマクロ実行」で再生でき、JavaScript マクロとして保存することもできます。</p>
+
+  <h3>JavaScript マクロ</h3>
+  <p>マクロは JavaScript で書きます。… → マクロ → マクロ一覧から追加・編集できます。マクロ全体は1回の「元に戻す」で取り消せます。</p>
+<pre><code>// 選択した行の先頭に「&gt; 」を付ける
+const s = Editor.GetSelectedString();
+Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pre>
+
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>命令</th><th>働き</th></tr></thead>
+    <tbody>
+      <tr><td><code>Editor.GetText()</code> / <code>Editor.SetText(s)</code></td><td>全文の取得・置き換え</td></tr>
+      <tr><td><code>Editor.GetSelectedString()</code></td><td>選択中の文字列</td></tr>
+      <tr><td><code>Editor.InsertText(s)</code></td><td>カーソル位置に挿入（選択範囲は置き換え）</td></tr>
+      <tr><td><code>Editor.AddTail(s)</code></td><td>末尾に追加</td></tr>
+      <tr><td><code>Editor.DeleteBack()</code></td><td>1文字削除</td></tr>
+      <tr><td><code>Editor.ReplaceAll(検索, 置換, {regex, ignoreCase, wholeWord})</code></td><td>すべて置換（置換した数を返す）</td></tr>
+      <tr><td><code>Editor.Find(検索, {regex, ignoreCase, wholeWord, backward})</code></td><td>次を検索して選択（見つかれば true）</td></tr>
+      <tr><td><code>Editor.GetLineCount()</code> / <code>Editor.GetLineStr(行)</code></td><td>行数・行の内容（行は1から数える）</td></tr>
+      <tr><td><code>Editor.GetCursorLine()</code> / <code>Editor.GetCursorColumn()</code></td><td>カーソルの行・桁</td></tr>
+      <tr><td><code>Editor.Jump(行)</code> / <code>Editor.MoveCursor(行, 桁)</code></td><td>カーソルの移動</td></tr>
+      <tr><td><code>Editor.GetSelectionStart()</code> / <code>GetSelectionLength()</code> / <code>SetSelection(開始, 長さ)</code></td><td>選択範囲の取得・設定</td></tr>
+      <tr><td><code>Editor.Command("コマンド名")</code></td><td>編集コマンドの実行（例：<code>"duplicateLine"</code>、<code>"toUpper"</code>、<code>"sortAscending"</code>）</td></tr>
+      <tr><td><code>Editor.GetFilename()</code></td><td>ファイル名</td></tr>
+      <tr><td><code>Editor.GetClipboard()</code> / <code>Editor.SetClipboard(s)</code></td><td>クリップボードの読み書き</td></tr>
+      <tr><td><code>Editor.Alert(s)</code> / <code>console.log(s)</code></td><td>実行後にメッセージを表示</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>マクロから操作できるのは、開いているファイルとクリップボードだけです。ほかのファイルの読み書きや、インターネットへの接続はできません。</p>
+</section>
+
+<!-- ===================== ショートカット ===================== -->
+<section id="keys">
+  <h2>キーボードショートカット（初期設定）</h2>
+  <p>iPad などに外付けキーボードをつないだときに使えます。共通設定 →「キー割り当て」で変更でき、1つのコマンドに複数のキーを割り当てられます。</p>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>操作</th><th>キー</th></tr></thead>
+    <tbody>
+      <tr><td>新規作成 / 上書き保存 / タブを閉じる</td><td><kbd>⌘N</kbd> / <kbd>⌘S</kbd> / <kbd>⌘W</kbd></td></tr>
+      <tr><td>次のタブ / 前のタブ</td><td><kbd>⇧⌘]</kbd> / <kbd>⇧⌘[</kbd></td></tr>
+      <tr><td>検索 / 置換</td><td><kbd>⌘F</kbd> / <kbd>⌘R</kbd></td></tr>
+      <tr><td>次を検索 / 前を検索</td><td><kbd>⌘G</kbd> または <kbd>F3</kbd> / <kbd>⇧⌘G</kbd> または <kbd>⇧F3</kbd></td></tr>
+      <tr><td>Grep</td><td><kbd>⇧⌘F</kbd></td></tr>
+      <tr><td>指定行へジャンプ</td><td><kbd>⌘J</kbd></td></tr>
+      <tr><td>タグジャンプ / ダイレクトタグジャンプ</td><td><kbd>F12</kbd> または <kbd>⌘Return</kbd> / <kbd>⇧F12</kbd></td></tr>
+      <tr><td>ブックマーク設定・解除</td><td><kbd>⌘F2</kbd> または <kbd>⌘B</kbd></td></tr>
+      <tr><td>次のブックマーク / 前のブックマーク</td><td><kbd>F2</kbd> / <kbd>⇧F2</kbd></td></tr>
+      <tr><td>行の複製 / 行削除</td><td><kbd>⌘D</kbd> / <kbd>⇧⌘K</kbd></td></tr>
+      <tr><td>行コメント切替</td><td><kbd>⌘/</kbd></td></tr>
+      <tr><td>インデント / 逆インデント</td><td><kbd>⌘]</kbd> / <kbd>⌘[</kbd></td></tr>
+      <tr><td>英大文字へ / 英小文字へ</td><td><kbd>⇧⌘U</kbd> / <kbd>⌘U</kbd></td></tr>
+      <tr><td>アウトライン解析</td><td><kbd>⇧⌘O</kbd></td></tr>
+      <tr><td>入力補完</td><td><kbd>⌃Space</kbd></td></tr>
+      <tr><td>キーワードヘルプ</td><td><kbd>⇧⌘H</kbd></td></tr>
+      <tr><td>キーマクロの記録開始・終了 / キーマクロ実行</td><td><kbd>⇧⌘R</kbd> / <kbd>⇧⌘L</kbd></td></tr>
+      <tr><td>行頭へ / 行末へ</td><td><kbd>Home</kbd> / <kbd>End</kbd></td></tr>
+      <tr><td>ファイルの先頭へ / 最後へ</td><td><kbd>⌃Home</kbd> / <kbd>⌃End</kbd></td></tr>
+      <tr><td>印刷 / 共通設定</td><td><kbd>⌘P</kbd> / <kbd>⌘,</kbd></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <h2>よくある質問</h2>
+
+  <details>
+    <summary>別の端末にファイルが同期されません</summary>
+    <p>次の点を確認してください。</p>
+    <ul>
+      <li>両方の端末が同じ Apple ID でサインインしていること</li>
+      <li>「設定」アプリ → 自分の名前 → iCloud で iCloud Drive がオンになっていること</li>
+      <li>ネットワークにつながっていること。また、iCloud の空き容量が足りていること</li>
+    </ul>
+    <p>ファイル一覧の上部に「iCloud で同期中」と表示されていれば、iCloud を使っています。「この端末のみに保存」と表示されているときは、iCloud を使えない状態です。同期には数分かかることがあります。</p>
+  </details>
+
+  <details>
+    <summary>文字化けしています</summary>
+    <p>編集画面の … →「文字コードを指定して開き直す」で、正しい文字コード（Shift_JIS、EUC-JP など）を選んでください。画面下のステータスバーの文字コード表示をタップしても選べます。</p>
+  </details>
+
+  <details>
+    <summary>保存すると「?」に置き換わる文字があります</summary>
+    <p>保存する文字コードで表せない文字（例：Shift_JIS のファイルに入れた絵文字）は「?」に置き換わります。ステータスバーの文字コード表示をタップして、保存する文字コードを UTF-8 などに変更してください。</p>
+  </details>
+
+  <details>
+    <summary>「ファイルの競合」と表示されました</summary>
+    <p>同じファイルを複数の端末でほぼ同時に編集すると表示されます。「この端末の内容を残す」か「他の端末の内容を使う」を選んでください。</p>
+  </details>
+
+  <details>
+    <summary>前の内容に戻したい</summary>
+    <p>自動バックアップがオンのとき（初期設定はオン）は、保存の前の内容が端末内にバックアップされています。ファイル一覧の右上の … →「バックアップ」から内容を確認し、新しいファイルとして復元できます。保存しておく世代数は共通設定で変えられます。</p>
+    <p>編集中の内容は、「元に戻す」でも戻せます。</p>
+  </details>
+
+  <details>
+    <summary>ファイルはどこに保存されていますか？</summary>
+    <p>iCloud を使っているときは、iCloud Drive の「日本エディタ」フォルダです。「ファイル」アプリからも見られます。iCloud を使っていないときは、端末内の「このiPhone（iPad）内」→「日本エディタ」フォルダです。</p>
+  </details>
+
+  <details>
+    <summary>パソコンのファイルを編集したい</summary>
+    <p>パソコンから iCloud Drive の「日本エディタ」フォルダにファイルを置くと、日本エディタで開けます。また、ファイル一覧の ＋ →「『ファイル』から読み込む」を使うと、他の場所にあるファイルを取り込めます。</p>
+  </details>
+
+  <details>
+    <summary>対応していない機能はありますか？</summary>
+    <p>iOS の仕組み上、次の機能には対応していません。</p>
+    <ul>
+      <li>矩形（箱型）選択</li>
+      <li>アプリの常駐</li>
+      <li>VBScript などの JavaScript 以外の言語で書いたマクロ</li>
+      <li>UTF-7 の読み書き</li>
+    </ul>
+  </details>
+</section>
+
+<!-- ===================== お問い合わせ ===================== -->
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <p>不具合のご報告、ご要望、ご質問は、下記のメールアドレスまでお送りください。</p>
+  <p><strong>メール：</strong><a href="mailto:damed6830@gmail.com">damed6830@gmail.com</a></p>
+  <p>不具合のご報告の際は、次の情報を添えていただけると原因の特定が早くなります。</p>
+  <ul>
+    <li>お使いの端末（例：iPhone 17、iPad Air）と iOS のバージョン</li>
+    <li>日本エディタのバージョン（共通設定の一番下に表示されます）</li>
+    <li>起きたこと、その直前に行った操作</li>
+    <li>使っていた編集モードと文字コード</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="privacy.html">プライバシーポリシー</a></p>
+    <p>iCloud、iCloud Drive、iPhone、iPad は Apple Inc. の商標です。</p>
+    <p>&copy; 2026 日本エディタ</p>
+  </div>
+</footer>
+
+</body>
+</html>
