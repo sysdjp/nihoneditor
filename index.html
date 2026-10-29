@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>日本エディタ サポート</title>
-<meta name="description" content="iPhone・iPad 用テキストエディタ「日本エディタ」のサポートページです。機能一覧、使い方、よくある質問、お問い合わせ先を掲載しています。">
+<meta name="description" content="iPhone・iPad・Mac 用テキストエディタ「日本エディタ」のサポートページです。機能一覧、使い方、よくある質問、お問い合わせ先を掲載しています。">
 <link rel="icon" type="image/png" href="icon.png?v=2">
 <link rel="apple-touch-icon" href="icon.png?v=2">
 <link rel="stylesheet" href="style.css">
@@ -28,16 +28,16 @@
       <img src="icon.png" alt="日本エディタのアイコン">
       <div>
         <h1>日本エディタ</h1>
-        <p class="lead">iPhone・iPad で使える、日本語に強いテキストエディタ</p>
+        <p class="lead">iPhone・iPad・Mac で使える、日本語に強いテキストエディタ</p>
       </div>
     </div>
-    <p class="req">対応環境：iOS 17 / iPadOS 17 以降（iPhone・iPad の両方で使えます。操作の違いは<a href="#devices">こちら</a>）</p>
+    <p class="req">対応環境：iOS 17 / iPadOS 17 以降、macOS 14 Sonoma 以降（iPhone・iPad・Mac で使えます。一度入手すればすべての端末で使えます。操作の違いは<a href="#devices">こちら</a>）</p>
   </div>
 
   <ul class="toc">
     <li><a href="#features">機能一覧</a></li>
     <li><a href="#start">基本的な使い方</a></li>
-    <li><a href="#devices">iPhone と iPad の違い</a></li>
+    <li><a href="#devices">iPhone・iPad・Mac の違い</a></li>
     <li><a href="#sync">iCloud 同期</a></li>
     <li><a href="#macro">マクロ</a></li>
     <li><a href="#keys">キーボードショートカット</a></li>
@@ -130,7 +130,8 @@
         <li>入力補完（文書内の単語・キーワード・単語ファイル）</li>
         <li>キーワードヘルプ（自分で登録する辞書）</li>
         <li>キーボード上のツールバー（ボタンを自由に並べ替え）</li>
-        <li>外付けキーボードのショートカット（変更可能）</li>
+        <li>キーボードショートカット（Mac・外付けキーボード、変更可能）</li>
+        <li>Mac ではメニューバーからすべての機能を利用可能</li>
       </ul>
     </div>
     <div class="card">
@@ -146,7 +147,7 @@
       <ul>
         <li>フォルダ分け、名前の変更、削除</li>
         <li>複数ファイルをタブで切り替え</li>
-        <li>「ファイル」アプリからの読み込み、共有・書き出し</li>
+        <li>「ファイル」アプリ（Mac では Finder）からの読み込み、共有・書き出し</li>
         <li>自動保存、世代付きの自動バックアップと復元</li>
         <li>差分表示（保存済みの内容・他のファイル・バックアップと比較）</li>
       </ul>
@@ -209,28 +210,28 @@
   <h3>ファイルを作る・開く</h3>
   <ul>
     <li>ファイル一覧の右上の <strong>＋</strong> から、新規ファイル・新規フォルダの作成や、「ファイル」アプリからの読み込みができます。</li>
-    <li>ファイルを長押しすると、名前の変更・共有・削除ができます。</li>
-    <li>開いたファイルは画面上部にタブとして並び、タップで切り替えられます。</li>
+    <li>ファイルを長押し（Mac では右クリック）すると、名前の変更・共有・削除ができます。</li>
+    <li>開いたファイルは画面上部にタブとして並び、タップ（Mac ではクリック）で切り替えられます。</li>
   </ul>
 
   <h3>編集画面</h3>
   <ul>
-    <li>右上の <strong>🔍</strong> で検索・置換、<strong>≡</strong> でアウトライン、<strong>…</strong> でそのほかのすべての機能を使えます。</li>
-    <li>キーボードの上のツールバーには、TAB 入力・カーソル移動・元に戻すなどのボタンが並びます。入力中は、補完の候補もここに表示されます。</li>
-    <li>画面下のステータスバーに、カーソルの行・桁、編集モード、文字コード、改行コードが表示されます。タップすると切り替えられます。</li>
+    <li>右上の <strong>🔍</strong> で検索・置換、<strong>≡</strong> でアウトライン、<strong>…</strong> でそのほかのすべての機能を使えます。Mac では、メニューバーからも同じ機能を使えます。</li>
+    <li>キーボードの上（Mac ではウインドウの下部）のツールバーには、TAB 入力・カーソル移動・元に戻すなどのボタンが並びます。入力中は、補完の候補もここに表示されます。</li>
+    <li>画面下のステータスバーに、カーソルの行・桁、編集モード、文字コード、改行コードが表示されます。タップ（Mac ではクリック）すると切り替えられます。</li>
   </ul>
 
   <h3>設定</h3>
   <ul>
-    <li><strong>共通設定</strong>（ファイル一覧の右上の … → 設定）：フォント、新規ファイルの文字コード、自動保存、バックアップ、キー割り当て、ツールバー、印刷設定など。</li>
+    <li><strong>共通設定</strong>（ファイル一覧の右上の … → 設定。Mac ではメニューバーの ツール → 共通設定、または <kbd>⌘,</kbd>）：フォント、新規ファイルの文字コード、自動保存、バックアップ、キー割り当て、ツールバー、印刷設定など。</li>
     <li><strong>タイプ別設定</strong>（編集画面の … → タイプ別設定）：TAB 幅、折り返し、禁則処理、色、キーワード、アウトライン解析ルール、入力補完の単語、キーワードヘルプ辞書など。編集モードごとに設定できます。</li>
   </ul>
 </section>
 
-<!-- ===================== iPhone と iPad の違い ===================== -->
+<!-- ===================== iPhone・iPad・Mac の違い ===================== -->
 <section id="devices">
-  <h2>iPhone と iPad の違い</h2>
-  <p>機能はどちらも同じです。画面の大きさに合わせて、画面の構成と操作が少し変わります。</p>
+  <h2>iPhone・iPad・Mac の違い</h2>
+  <p>機能はどの端末でも同じです。画面の大きさや操作方法に合わせて、画面の構成と操作が少し変わります。</p>
 
   <h3>iPhone での操作</h3>
   <ul>
@@ -250,17 +251,28 @@
     <li><strong>外付けキーボード：</strong>Magic Keyboard などをつなぐと、<a href="#keys">キーボードショートカット</a>で操作できます。外付けキーボードを使っているときも、画面の下にツールバーと入力補完の候補が表示されます。</li>
   </ul>
 
+  <h3>Mac での操作</h3>
+  <ul>
+    <li><strong>画面の構成：</strong>ウインドウの左にファイル一覧、右に編集画面が並びます。左上のサイドバーのボタンで、ファイル一覧の表示・非表示を切り替えられます。</li>
+    <li><strong>メニューバー：</strong>「ファイル」「編集」「変換」「検索」「ツール」「マクロ」のメニューから、すべての機能を使えます。割り当てたショートカットは、メニューの項目の右に表示されます。</li>
+    <li><strong>ツールバーと入力補完：</strong>ウインドウの下部に、TAB 入力・カーソル移動などのボタンと、入力補完の候補が並びます。</li>
+    <li><strong>ファイルの操作：</strong>ファイル一覧のファイルやフォルダを右クリックすると、名前の変更・共有・削除ができます。</li>
+    <li><strong>書き出し：</strong>「共有・書き出し」では、保存先を選んでファイルのコピーを書き出します。</li>
+    <li><strong>マクロ：</strong>メニューバーの「マクロ」には、キーマクロの記録・実行とマクロ一覧があります。登録したマクロは「マクロ一覧」から実行します。</li>
+  </ul>
+
   <h3>共通</h3>
   <ul>
-    <li>右上の <strong>🔍</strong>（検索）・<strong>≡</strong>（アウトライン）・<strong>…</strong>（そのほかの機能）、画面下のステータスバーは、iPhone・iPad で同じ位置にあります。</li>
-    <li>同じ Apple ID なら、iPhone で作ったファイルを iPad で続けて編集できます（<a href="#sync">iCloud 同期</a>）。</li>
+    <li>右上の <strong>🔍</strong>（検索）・<strong>≡</strong>（アウトライン）・<strong>…</strong>（そのほかの機能）、画面下のステータスバーは、iPhone・iPad・Mac で同じ位置にあります。</li>
+    <li>同じ Apple ID なら、iPhone で作ったファイルを iPad や Mac で続けて編集できます（<a href="#sync">iCloud 同期</a>）。</li>
+    <li>一度入手すれば、同じ Apple ID の iPhone・iPad・Mac のすべてで使えます。</li>
   </ul>
 </section>
 
 <!-- ===================== iCloud 同期 ===================== -->
 <section id="sync">
   <h2>iCloud 同期</h2>
-  <p>日本エディタで作ったファイルは iCloud Drive の「日本エディタ」フォルダに保存され、同じ Apple ID でサインインしている iPhone・iPad の間で自動的に同期されます。「ファイル」アプリの iCloud Drive からも開けます。</p>
+  <p>日本エディタで作ったファイルは iCloud Drive の「日本エディタ」フォルダに保存され、同じ Apple ID でサインインしている iPhone・iPad・Mac の間で自動的に同期されます。「ファイル」アプリや Mac の Finder の iCloud Drive からも開けます。</p>
   <p>次の情報も同期されます。</p>
   <ul>
     <li>共通設定・タイプ別設定</li>
@@ -268,7 +280,7 @@
     <li>各ファイルのブックマーク、カーソル位置、編集モード</li>
   </ul>
   <div class="note">
-    同期するには、「設定」アプリ → 自分の名前 → iCloud で <strong>iCloud Drive</strong> をオンにしてください。iCloud を使えないときは、ファイルは端末内に保存されます。あとで iCloud を有効にしたら、日本エディタの設定画面から端末内のファイルを iCloud へ移動できます。
+    同期するには、iPhone・iPad では「設定」アプリ → 自分の名前 → iCloud、Mac では「システム設定」→ 自分の名前 → iCloud で、<strong>iCloud Drive</strong> をオンにしてください。iCloud を使えないときは、ファイルは端末内に保存されます。あとで iCloud を有効にしたら、日本エディタの設定画面から端末内のファイルを iCloud へ移動できます。
   </div>
   <p>自動バックアップは端末内だけに保存され、同期されません。</p>
 </section>
@@ -313,10 +325,10 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
 <!-- ===================== ショートカット ===================== -->
 <section id="keys">
   <h2>キーボードショートカット（初期設定）</h2>
-  <p>iPhone・iPad に Bluetooth などの外付けキーボードをつないだときに使えます（画面のキーボードでは使えません）。共通設定 →「キー割り当て」で変更でき、1つのコマンドに複数のキーを割り当てられます。</p>
+  <p>Mac ではそのまま使えます。iPhone・iPad では、Bluetooth などの外付けキーボードをつないだときに使えます（画面のキーボードでは使えません）。共通設定 →「キー割り当て」で変更でき、1つのコマンドに複数のキーを割り当てられます。</p>
   <div class="note">
-    キーボードの種類によっては、F キーや Home・End キーがないため使えないショートカットがあります。F キーは fn キーと一緒に押すと使える場合があります。<br>
-    <kbd>⌃Space</kbd>（入力補完）は、iOS の入力言語の切り替えと重なるため使えない場合があります。そのときは「キー割り当て」で別のキーに変更してください。
+    キーボードの種類によっては、F キーや Home・End キーがないため使えないショートカットがあります。F キーは fn キーと一緒に押すと使える場合があります（Mac のキーボードでは、Home は <kbd>fn</kbd>＋<kbd>←</kbd>、End は <kbd>fn</kbd>＋<kbd>→</kbd> です）。<br>
+    <kbd>⌃Space</kbd>（入力補完）は、iOS・macOS の入力言語の切り替えと重なるため使えない場合があります。そのときは「キー割り当て」で別のキーに変更してください。
   </div>
   <div class="table-scroll">
   <table>
@@ -356,7 +368,7 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
     <p>次の点を確認してください。</p>
     <ul>
       <li>両方の端末が同じ Apple ID でサインインしていること</li>
-      <li>「設定」アプリ → 自分の名前 → iCloud で iCloud Drive がオンになっていること</li>
+      <li>iCloud Drive がオンになっていること（iPhone・iPad は「設定」アプリ、Mac は「システム設定」→ 自分の名前 → iCloud）</li>
       <li>ネットワークにつながっていること。また、iCloud の空き容量が足りていること</li>
     </ul>
     <p>ファイル一覧の上部に「iCloud で同期中」と表示されていれば、iCloud を使っています。「この端末のみに保存」と表示されているときは、iCloud を使えない状態です。同期には数分かかることがあります。</p>
@@ -364,7 +376,7 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
 
   <details>
     <summary>文字化けしています</summary>
-    <p>編集画面の … →「文字コードを指定して開き直す」で、正しい文字コード（Shift_JIS、EUC-JP など）を選んでください。画面下のステータスバーの文字コード表示をタップしても選べます。</p>
+    <p>編集画面の …（Mac ではメニューバーの「ファイル」）→「文字コードを指定して開き直す」で、正しい文字コード（Shift_JIS、EUC-JP など）を選んでください。画面下のステータスバーの文字コード表示をタップしても選べます。</p>
   </details>
 
   <details>
@@ -385,20 +397,21 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
 
   <details>
     <summary>ファイルはどこに保存されていますか？</summary>
-    <p>iCloud を使っているときは、iCloud Drive の「日本エディタ」フォルダです。「ファイル」アプリからも見られます。iCloud を使っていないときは、端末内の「このiPhone（iPad）内」→「日本エディタ」フォルダです。</p>
+    <p>iCloud を使っているときは、iCloud Drive の「日本エディタ」フォルダです。iPhone・iPad では「ファイル」アプリ、Mac では Finder の iCloud Drive から見られます。iCloud を使っていないときは、iPhone・iPad では端末内の「このiPhone（iPad）内」→「日本エディタ」フォルダ、Mac ではアプリ専用の保存場所に保存されます。</p>
   </details>
 
   <details>
     <summary>パソコンのファイルを編集したい</summary>
-    <p>パソコンから iCloud Drive の「日本エディタ」フォルダにファイルを置くと、日本エディタで開けます。また、ファイル一覧の ＋ →「『ファイル』から読み込む」を使うと、他の場所にあるファイルを取り込めます。</p>
+    <p>Mac 版の日本エディタで直接編集できます。Windows パソコンなどからは、iCloud Drive の「日本エディタ」フォルダにファイルを置くと、日本エディタで開けます。また、ファイル一覧の ＋ →「『ファイル』から読み込む」を使うと、他の場所にあるファイルを取り込めます。</p>
   </details>
 
   <details>
     <summary>対応していない機能はありますか？</summary>
-    <p>iOS の仕組み上、次の機能には対応していません。</p>
+    <p>iOS・macOS の仕組み上、次の機能には対応していません。</p>
     <ul>
       <li>矩形（箱型）選択</li>
       <li>アプリの常駐</li>
+      <li>複数のウインドウ（Mac）。ファイルはタブで切り替えてください</li>
       <li>VBScript などの JavaScript 以外の言語で書いたマクロ</li>
       <li>UTF-7 の読み書き</li>
     </ul>
@@ -412,7 +425,7 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
   <p><strong>メール：</strong><a href="mailto:damed6830@gmail.com">damed6830@gmail.com</a></p>
   <p>不具合のご報告の際は、次の情報を添えていただけると原因の特定が早くなります。</p>
   <ul>
-    <li>お使いの端末（例：iPhone 17、iPad Air）と iOS のバージョン</li>
+    <li>お使いの端末（例：iPhone 17、iPad Air、MacBook Air）と iOS・macOS のバージョン</li>
     <li>日本エディタのバージョン（共通設定の一番下に表示されます）</li>
     <li>起きたこと、その直前に行った操作</li>
     <li>使っていた編集モードと文字コード</li>
@@ -425,7 +438,7 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
 <footer class="site">
   <div class="wrap">
     <p><a href="privacy.html">プライバシーポリシー</a></p>
-    <p>iCloud、iCloud Drive、iPhone、iPad は Apple Inc. の商標です。</p>
+    <p>iCloud、iCloud Drive、iPhone、iPad、Mac、macOS、Finder は Apple Inc. の商標です。</p>
     <p>&copy; 2026 日本エディタ</p>
   </div>
 </footer>
