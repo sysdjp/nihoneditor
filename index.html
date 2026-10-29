@@ -31,12 +31,13 @@
         <p class="lead">iPhone・iPad で使える、日本語に強いテキストエディタ</p>
       </div>
     </div>
-    <p class="req">対応環境：iOS 17 / iPadOS 17 以降（iPhone・iPad）</p>
+    <p class="req">対応環境：iOS 17 / iPadOS 17 以降（iPhone・iPad の両方で使えます。操作の違いは<a href="#devices">こちら</a>）</p>
   </div>
 
   <ul class="toc">
     <li><a href="#features">機能一覧</a></li>
     <li><a href="#start">基本的な使い方</a></li>
+    <li><a href="#devices">iPhone と iPad の違い</a></li>
     <li><a href="#sync">iCloud 同期</a></li>
     <li><a href="#macro">マクロ</a></li>
     <li><a href="#keys">キーボードショートカット</a></li>
@@ -226,6 +227,36 @@
   </ul>
 </section>
 
+<!-- ===================== iPhone と iPad の違い ===================== -->
+<section id="devices">
+  <h2>iPhone と iPad の違い</h2>
+  <p>機能はどちらも同じです。画面の大きさに合わせて、画面の構成と操作が少し変わります。</p>
+
+  <h3>iPhone での操作</h3>
+  <ul>
+    <li><strong>画面の切り替え：</strong>ファイル一覧と編集画面は1画面ずつ表示されます。ファイルをタップすると編集画面に進み、左上の戻るボタン（<strong>＜</strong>）でファイル一覧に戻ります。</li>
+    <li><strong>画面の向き：</strong>縦向きと横向きで使えます（上下逆さまには対応していません）。横向きにすると、1行に表示できる文字数が増えます。</li>
+    <li><strong>入力：</strong>画面のキーボードの上に、TAB 入力・カーソル移動・元に戻すなどのボタンが並ぶツールバーが出ます。細かいカーソル移動はこのボタンを使うと便利です。ボタンの種類と並び順は、共通設定 →「ツールバー」で変えられます。</li>
+    <li><strong>タブ：</strong>開いたファイルのタブは画面上部に並びます。たくさん開いたときは、左右にスクロールして切り替えます。</li>
+    <li><strong>アウトライン・ブックマーク一覧など：</strong>画面の下から半分の高さで開きます。上に引き上げると全画面になり、下に引き下げると閉じます。</li>
+    <li><strong>外付けキーボード：</strong>Bluetooth などのキーボードをつなぐと、<a href="#keys">キーボードショートカット</a>も使えます。</li>
+  </ul>
+
+  <h3>iPad での操作</h3>
+  <ul>
+    <li><strong>画面の構成：</strong>横向きでは、ファイル一覧と編集画面が左右に並びます。縦向きなど画面が狭いときは編集画面が大きく表示され、左上のサイドバーのボタンでファイル一覧の表示・非表示を切り替えられます。</li>
+    <li><strong>画面の向き：</strong>縦・横・上下逆さまのすべての向きで使えます。</li>
+    <li><strong>アウトライン・Grep・設定など：</strong>画面の中央に、小さなウインドウとして開きます。</li>
+    <li><strong>外付けキーボード：</strong>Magic Keyboard などをつなぐと、<a href="#keys">キーボードショートカット</a>で操作できます。外付けキーボードを使っているときも、画面の下にツールバーと入力補完の候補が表示されます。</li>
+  </ul>
+
+  <h3>共通</h3>
+  <ul>
+    <li>右上の <strong>🔍</strong>（検索）・<strong>≡</strong>（アウトライン）・<strong>…</strong>（そのほかの機能）、画面下のステータスバーは、iPhone・iPad で同じ位置にあります。</li>
+    <li>同じ Apple ID なら、iPhone で作ったファイルを iPad で続けて編集できます（<a href="#sync">iCloud 同期</a>）。</li>
+  </ul>
+</section>
+
 <!-- ===================== iCloud 同期 ===================== -->
 <section id="sync">
   <h2>iCloud 同期</h2>
@@ -282,7 +313,11 @@ Editor.InsertText(s.split("\n").map(l =&gt; "&gt; " + l).join("\n"));</code></pr
 <!-- ===================== ショートカット ===================== -->
 <section id="keys">
   <h2>キーボードショートカット（初期設定）</h2>
-  <p>iPad などに外付けキーボードをつないだときに使えます。共通設定 →「キー割り当て」で変更でき、1つのコマンドに複数のキーを割り当てられます。</p>
+  <p>iPhone・iPad に Bluetooth などの外付けキーボードをつないだときに使えます（画面のキーボードでは使えません）。共通設定 →「キー割り当て」で変更でき、1つのコマンドに複数のキーを割り当てられます。</p>
+  <div class="note">
+    キーボードの種類によっては、F キーや Home・End キーがないため使えないショートカットがあります。F キーは fn キーと一緒に押すと使える場合があります。<br>
+    <kbd>⌃Space</kbd>（入力補完）は、iOS の入力言語の切り替えと重なるため使えない場合があります。そのときは「キー割り当て」で別のキーに変更してください。
+  </div>
   <div class="table-scroll">
   <table>
     <thead><tr><th>操作</th><th>キー</th></tr></thead>
